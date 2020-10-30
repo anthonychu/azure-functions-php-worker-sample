@@ -1,0 +1,197 @@
+POST http://localhost:7071/api/messages
+Content-type: application/json
+
+{
+  "sender": "anthony",
+  "text": "hello world"
+}
+
+###
+
+POST http://localhost:8080/HttpTrigger
+Content-type: application/json
+
+{
+  "Data": {
+    "req": {
+      "Url": "http://localhost:7071/api/messages",
+      "Method": "POST",
+      "Query": "{\"name\":\"anthony\"}",
+      "Headers": {
+        "Connection": [
+          "close"
+        ],
+        "Content-Type": [
+          "application/json"
+        ],
+        "Accept-Encoding": [
+          "gzip, deflate"
+        ],
+        "Host": [
+          "localhost:7071"
+        ],
+        "User-Agent": [
+          "vscode-restclient"
+        ],
+        "Content-Length": [
+          "20"
+        ]
+      },
+      "Params": {},
+      "Identities": "[{\"AuthenticationType\":\"WebJobsAuthLevel\",\"IsAuthenticated\":true,\"Actor\":null,\"BootstrapContext\":null,\"Claims\":[{\"Issuer\":\"LOCAL AUTHORITY\",\"OriginalIssuer\":\"LOCAL AUTHORITY\",\"Properties\":{},\"Type\":\"http://schemas.microsoft.com/2017/07/functions/claims/authlevel\",\"Value\":\"Admin\",\"ValueType\":\"http://www.w3.org/2001/XMLSchema#string\"}],\"Label\":null,\"Name\":null,\"NameClaimType\":\"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name\",\"RoleClaimType\":\"http://schemas.microsoft.com/ws/2008/06/identity/claims/role\"}]",
+      "Body": "{\"sender\": \"anthony\", \"text\": \"testing\"}"
+    }
+  },
+  "Metadata": {
+    "Query": "{}",
+    "Headers": "{\"Connection\":\"close\",\"Content-Type\":\"application/json\",\"Accept-Encoding\":\"gzip, deflate\",\"Host\":\"localhost:7071\",\"User-Agent\":\"vscode-restclient\",\"Content-Length\":\"20\"}",
+    "sys": "{\"MethodName\":\"messages\",\"UtcNow\":\"2020-01-25T21:36:51.761065Z\",\"RandGuid\":\"3b54fb10-ab9e-4dfc-833d-f227668bd198\"}"
+  }
+}
+
+
+
+####
+
+POST http://localhost:59479/negotiate
+Content-type: application/json
+
+{
+  "Data": {
+    "req": {
+      "Url": "http://localhost:7071/api/negotiate",
+      "Method": "GET",
+      "Query": "{}",
+      "Headers": {
+        "Cache-Control": [
+          "max-age=0"
+        ],
+        "Connection": [
+          "keep-alive"
+        ],
+        "Accept": [
+          "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+        ],
+        "Accept-Encoding": [
+          "gzip, deflate, br"
+        ],
+        "Accept-Language": [
+          "en-CA,en-US;q=0.9,en;q=0.8"
+        ],
+        "Host": [
+          "localhost:7071"
+        ],
+        "User-Agent": [
+          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36 Edg/79.0.309.65"
+        ],
+        "Upgrade-Insecure-Requests": [
+          "1"
+        ],
+        "Sec-Fetch-User": [
+          "?1"
+        ],
+        "Sec-Fetch-Site": [
+          "cross-site"
+        ],
+        "Sec-Fetch-Mode": [
+          "navigate"
+        ]
+      },
+      "Params": {},
+      "Identities": "[{\"AuthenticationType\":\"WebJobsAuthLevel\",\"IsAuthenticated\":true,\"Actor\":null,\"BootstrapContext\":null,\"Claims\":[{\"Issuer\":\"LOCAL AUTHORITY\",\"OriginalIssuer\":\"LOCAL AUTHORITY\",\"Properties\":{},\"Type\":\"http://schemas.microsoft.com/2017/07/functions/claims/authlevel\",\"Value\":\"Admin\",\"ValueType\":\"http://www.w3.org/2001/XMLSchema#string\"}],\"Label\":null,\"Name\":null,\"NameClaimType\":\"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name\",\"RoleClaimType\":\"http://schemas.microsoft.com/ws/2008/06/identity/claims/role\"}]"
+    },
+    "connectionInfo": "{\"url\":\"https://vanazureachu.service.signalr.net/client/?hub=chat\",\"accessToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE1Nzk5ODc3MzAsImV4cCI6MTU3OTk4OTUzMCwiaWF0IjoxNTc5OTg3NzMwLCJhdWQiOiJodHRwczovL3ZhbmF6dXJlYWNodS5zZXJ2aWNlLnNpZ25hbHIubmV0L2NsaWVudC8_aHViPWNoYXQifQ.PDGG_cK6seGiMCgGii1GsCXTgl2HGJ_R9kqKV3XYi8M\"}"
+  },
+  "Metadata": {
+    "Query": "{}",
+    "Headers": "{\"Cache-Control\":\"max-age=0\",\"Connection\":\"keep-alive\",\"Accept\":\"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\",\"Accept-Encoding\":\"gzip, deflate, br\",\"Accept-Language\":\"en-CA,en-US;q=0.9,en;q=0.8\",\"Host\":\"localhost:7071\",\"User-Agent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36 Edg/79.0.309.65\",\"Upgrade-Insecure-Requests\":\"1\",\"Sec-Fetch-User\":\"?1\",\"Sec-Fetch-Site\":\"cross-site\",\"Sec-Fetch-Mode\":\"navigate\"}",
+    "sys": "{\"MethodName\":\"negotiate\",\"UtcNow\":\"2020-01-25T21:28:50.297456Z\",\"RandGuid\":\"fe9bb2e2-2321-4e44-80e9-08c3d8b0b466\"}"
+  }
+}
+
+
+###
+
+POST http://localhost:7071/api/messages
+Content-Type: application/json
+
+{ "hello", "world" }
+
+###
+
+POST http://127.0.0.1:8080/HttpTrigger
+Content-Type: application/json; charset=utf-8
+
+{
+  "Data": {
+    "req": {
+      "Url": "http://localhost:7071/api/HttpTrigger",
+      "Method": "GET",
+      "Query": "{\"name\":\"anthony\"}",
+      "Headers": {
+        "Cache-Control": [
+          "max-age=0"
+        ],
+        "Connection": [
+          "keep-alive"
+        ],
+        "Accept": [
+          "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+        ],
+        "Accept-Encoding": [
+          "gzip, deflate, br"
+        ],
+        "Accept-Language": [
+          "en-CA,en-US;q=0.9,en;q=0.8"
+        ],
+        "Cookie": [
+          "io=qlFSqVVx3njBnla2AAAH; wordpress_test_cookie=WP+Cookie+check; wp-settings-1=libraryContent%3Dbrowse; wp-settings-time-1=1599452295"
+        ],
+        "Host": [
+          "localhost:7071"
+        ],
+        "User-Agent": [
+          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36 Edg/79.0.309.65"
+        ],
+        "Upgrade-Insecure-Requests": [
+          "1"
+        ],
+        "Sec-Fetch-User": [
+          "?1"
+        ],
+        "Sec-Fetch-Site": [
+          "cross-site"
+        ],
+        "Sec-Fetch-Mode": [
+          "navigate"
+        ]
+      },
+      "Params": {},
+      "Identities": "[{\"AuthenticationType\":null,\"IsAuthenticated\":false,\"Actor\":null,\"BootstrapContext\":null,\"Claims\":[],\"Label\":null,\"Name\":null,\"NameClaimType\":\"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name\",\"RoleClaimType\":\"http://schemas.microsoft.com/ws/2008/06/identity/claims/role\"}]"
+    }
+  },
+  "Metadata": {
+    "Query": {
+      "name": "anthony"
+    },
+    "Headers": {
+      "Cache-Control": "max-age=0",
+      "Connection": "keep-alive",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-CA,en-US;q=0.9,en;q=0.8",
+      "Cookie": "io=qlFSqVVx3njBnla2AAAH; wordpress_test_cookie=WP+Cookie+check; wp-settings-1=libraryContent%3Dbrowse; wp-settings-time-1=1599452295",
+      "Host": "localhost:7071",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36 Edg/79.0.309.65",
+      "Upgrade-Insecure-Requests": "1",
+      "Sec-Fetch-User": "?1",
+      "Sec-Fetch-Site": "cross-site",
+      "Sec-Fetch-Mode": "navigate"
+    },
+    "sys": {
+      "MethodName": "HttpTrigger",
+      "UtcNow": "2020-09-30T02:56:40.516318Z",
+      "RandGuid": "b407a15d-3c9e-490f-9239-0732cdddc141"
+    }
+  }
+}
