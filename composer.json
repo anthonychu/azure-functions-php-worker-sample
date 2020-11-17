@@ -1,0 +1,9 @@
+{
+    "name": "anthonychu/azure-functions-php-worker-sample",
+    "description": "PHP Custom Handler Azure Sample",
+    "type": "project",
+    "minimum-stability": "dev",
+    "require": {
+        "videlalvaro/azserverless": "*"
+    }
+}

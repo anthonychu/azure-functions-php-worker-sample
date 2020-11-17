@@ -1,10 +1,13 @@
 <?php
-    function run(FunctionContext $context) {
-        $req = $context->inputs['req'];
-        //$context->log->information(json_encode($req));
-        $context->log->information('Http trigger invoked');
+use Azserverless\Context\FunctionContext;
 
-        $query = json_decode($req['Query'], true);
+    function run(FunctionContext $context) {
+
+        $req = $context->inputs['req'];
+
+        $context->log->info('Http trigger invoked');
+
+        $query = $req['Query'];
 
         if (array_key_exists('name', $query)) {
             $name = $query['name'];
@@ -14,7 +17,8 @@
             $message = 'Please pass a name in the query string';
         }
 
-        $context->outputs['outputQueueItem'] = $name;
+        $context->outputs['outputQueueItem'] = json_encode($name);
+        $context->log->info(sprintf('Adding queue item: %s', $name));
 
         return [
             'body' => $message,
