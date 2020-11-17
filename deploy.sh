@@ -106,6 +106,8 @@ if [[ "$IN_PLACE_DEPLOYMENT" -ne "1" ]]; then
   exitWithMessageOnError "Kudu Sync failed"
 fi
 
+echo Post KuduSync
+
 # 2. Select node version
 selectNodeVersion
 
