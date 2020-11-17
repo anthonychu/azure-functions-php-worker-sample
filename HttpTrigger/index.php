@@ -1,8 +1,11 @@
 <?php
+use Azserverless\Context\FunctionContext;
+
     function run(FunctionContext $context) {
+
         $req = $context->inputs['req'];
-        //$context->log->information(json_encode($req));
-        $context->log->information('Http trigger invoked');
+
+        $context->log->info('Http trigger invoked');
 
         $query = json_decode($req['Query'], true);
 
