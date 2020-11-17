@@ -159,12 +159,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/videlalvaro/azserverless.git",
-                "reference": "04a88fd94399103e75034c55f91bf14ef09841d8"
+                "reference": "a083c78483083cab6848bd1eec2ddfe3fac4ba4b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/videlalvaro/azserverless/zipball/04a88fd94399103e75034c55f91bf14ef09841d8",
-                "reference": "04a88fd94399103e75034c55f91bf14ef09841d8",
+                "url": "https://api.github.com/repos/videlalvaro/azserverless/zipball/a083c78483083cab6848bd1eec2ddfe3fac4ba4b",
+                "reference": "a083c78483083cab6848bd1eec2ddfe3fac4ba4b",
                 "shasum": ""
             },
             "require": {
@@ -190,6 +190,10 @@
                 {
                     "name": "Alvaro Videla",
                     "email": "videlalvaro@gmail.com"
+                },
+                {
+                    "name": "Anthony Chu",
+                    "email": "anthony@anthonychu.ca"
                 }
             ],
             "description": "\"PHP Custom Handler for Azure Functions\"",
@@ -202,7 +206,7 @@
                 "issues": "https://github.com/videlalvaro/azserverless/issues",
                 "source": "https://github.com/videlalvaro/azserverless/tree/main"
             },
-            "time": "2020-11-17T14:51:43+00:00"
+            "time": "2020-11-17T15:23:55+00:00"
         }
     ],
     "packages-dev": [],
