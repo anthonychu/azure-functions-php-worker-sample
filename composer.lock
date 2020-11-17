@@ -159,12 +159,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/videlalvaro/azserverless.git",
-                "reference": "a083c78483083cab6848bd1eec2ddfe3fac4ba4b"
+                "reference": "8eec3eaa094831227e3d52122ca13b869fc4b9c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/videlalvaro/azserverless/zipball/a083c78483083cab6848bd1eec2ddfe3fac4ba4b",
-                "reference": "a083c78483083cab6848bd1eec2ddfe3fac4ba4b",
+                "url": "https://api.github.com/repos/videlalvaro/azserverless/zipball/8eec3eaa094831227e3d52122ca13b869fc4b9c8",
+                "reference": "8eec3eaa094831227e3d52122ca13b869fc4b9c8",
                 "shasum": ""
             },
             "require": {
@@ -206,7 +206,7 @@
                 "issues": "https://github.com/videlalvaro/azserverless/issues",
                 "source": "https://github.com/videlalvaro/azserverless/tree/main"
             },
-            "time": "2020-11-17T15:23:55+00:00"
+            "time": "2020-11-17T18:57:45+00:00"
         }
     ],
     "packages-dev": [],

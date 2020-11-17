@@ -7,7 +7,7 @@ use Azserverless\Context\FunctionContext;
 
         $context->log->info('Http trigger invoked');
 
-        $query = json_decode($req['Query'], true);
+        $query = $req['Query'];
 
         if (array_key_exists('name', $query)) {
             $name = $query['name'];
@@ -17,7 +17,8 @@ use Azserverless\Context\FunctionContext;
             $message = 'Please pass a name in the query string';
         }
 
-        $context->outputs['outputQueueItem'] = $name;
+        $context->outputs['outputQueueItem'] = json_encode($name);
+        $context->log->info(sprintf('Adding queue item: %s', $name));
 
         return [
             'body' => $message,
